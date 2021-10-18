@@ -3,10 +3,15 @@ import ExpenseForm from "./ExpenseForm";
 import './NewExpense.css'
 
 // it's not a wrapper component
-
 const NewExpense = () => {
+    // lifting up method
+    const saveExpenseHandler = data => {
+
+    }
+
+
     return <div className='new-expense'>
-        <ExpenseForm/>
+        <ExpenseForm onSaveExpenseDate={saveExpenseHandler}/>
     </div>
 }
 
