@@ -3,9 +3,15 @@ import ExpenseForm from "./ExpenseForm";
 import './NewExpense.css'
 
 // it's not a wrapper component
-const NewExpense = () => {
+const NewExpense = (props) => {
     // lifting up method
     const saveExpenseHandler = data => {
+        let expenseData = {
+            ...data,
+            id: Math.random().toString(),
+        }
+
+        props.onAddExpense(expenseData);
 
     }
 
